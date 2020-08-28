@@ -1,0 +1,424 @@
+.Mainpage {
+    height: 100vh;
+    background-color: #faf1dd;
+    position: relative;
+    overflow: hidden;
+    @include hVCenterFlex();
+    &_bigCircle {
+        @include circle(66.41vw);
+        @include hVCenterScale(1);
+        border-radius: 50%;
+        background-color: #f5e5c0;
+        z-index: 1;
+        @include anim(bigCircleShow, 10s);
+        @keyframes bigCircleShow {
+            0% {
+                opacity: 0;
+                @include hVCenterScale(0);
+            }
+            40% {
+                opacity: 0;
+                @include hVCenterScale(0);
+            }
+            50% {
+                opacity: 1;
+                @include hVCenterScale(1);
+            }
+            100% {
+                opacity: 1;
+                @include hVCenterScale(1);
+            }
+        }
+    }
+    &_smallCircle {
+        @include circle(42.32vw);
+        @include imgCover("../images/mv_titleBg@2x.png");
+        border-radius: 50%;
+        z-index: 4;
+        overflow: hidden;
+        @include anim(smallCircleShow, 10s);
+        @keyframes smallCircleShow {
+            0% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            10% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        &_loop {
+            position: relative;
+            top: 7px;
+            width: 40.11vw;
+            height: 39.72vw;
+            margin: auto;
+            @include imgCover("../images/mv_ribbon@2x.png");
+            backface-visibility: hidden;
+            @include anim(opacity, 10s);
+            z-index: 1;
+            @keyframes opacity {
+                0% {
+                    opacity: 0;
+                    transform: rotate(180deg);
+                }
+                10% {
+                    opacity: 0;
+                    transform: rotate(180deg);
+                }
+                20% {
+                    opacity: 1;
+                    transform: rotate(0deg);
+                }
+                100% {
+                    opacity: 1;
+                    transform: rotate(0deg);
+                }
+            }
+        }
+        &_topArea {
+            position: relative;
+            height: 60%;
+            text-align: center;
+            &_title {
+                width: 100%;
+                position: absolute;
+                margin: 8.6vw 0 0;
+                left: 0;
+                z-index: 4;
+            }
+            &_firttitle {
+                text-align: center;
+                img {
+                    position: relative;
+                    width: 23.7vw;
+                    left: 0vw;
+                    transform-origin: left;
+                    @include anim(titleScale, 10s);
+                    @keyframes titleScale {
+                        0% {
+                            opacity: 0;
+                            transform: scale(0);
+                        }
+                        20% {
+                            opacity: 0;
+                            transform: scale(0);
+                        }
+                        25% {
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+                        100% {
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+            &_secondtitle {
+                text-align: center;
+                img {
+                    position: relative;
+                    width: 22.79vw;
+                    left: 5.47vw;
+                    top: 0.14vw;
+                    transform-origin: left;
+                    @include anim(secondtitleScale, 10s);
+                    @keyframes secondtitleScale {
+                        0% {
+                            opacity: 0;
+                            transform: scale(0);
+                        }
+                        25% {
+                            opacity: 0;
+                            transform: scale(0);
+                        }
+                        30% {
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+                        100% {
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+            &_whale {
+                width: 40.76vw;
+                height: 19.02vw;
+                position: absolute;
+                left: 1.83vw;
+                right: 0;
+                bottom: -6.11vw;
+                transform-origin: right bottom;
+                @include imgCover("../images/mv_whale@2x.png");
+                z-index: 2;
+                @include anim(whaleMove, 10s);
+                @keyframes whaleMove {
+                    0% {
+                        transform: translate(20%, 100%);
+                    }
+                    10% {
+                        transform: translate(20%, 100%);
+                    }
+                    20% {
+                        transform: translate(20%, 80%);
+                    }
+                    30% {
+                        transform: translate(0px, -10%);
+                        transform-origin: bottom right;
+                    }
+                    35% {
+                        transform: translate(0px, 0px) rotate(-5deg);
+                        transform-origin: bottom right;
+                    }
+                    40% {
+                        transform: translate(0%, 0%);
+                    }
+                    100% {
+                        transform: translate(0%, 0%);
+                    }
+                }
+            }
+            &_bigwave {
+                width: 42.32vw;
+                height: 13.55vw;
+                position: absolute;
+                top: 16.93vw;
+                left: 0;
+                @include imgCover("../images/mv_wave_1.png");
+                z-index: 1;
+                @include anim(bigWaveMove, 10s);
+                @keyframes bigWaveMove {
+                    0% {
+                        transform: translate(0%, 100%);
+                    }
+                    10% {
+                        transform: translate(0%, 100%);
+                    }
+                    20% {
+                        transform: translate(0%, 0%);
+                    }
+                    100% {
+                        transform: translate(0%, 0%);
+                    }
+                }
+            }
+            &_smallwave {
+                width: 42.32vw;
+                height: 7.17vw;
+                position: absolute;
+                top: 19.8vw;
+                left: 0;
+                @include imgCover("../images/mv_wave_2.png");
+                z-index: 3;
+                @include anim(smallWaveMove, 10s);
+                @keyframes smallWaveMove {
+                    0% {
+                        transform: translate(0%, 100%);
+                    }
+                    20% {
+                        transform: translate(0%, 100%);
+                    }
+                    30% {
+                        transform: translate(0%, 0%);
+                    }
+                    100% {
+                        transform: translate(0%, 0%);
+                    }
+                }
+            }
+            &_titleSub {
+                width: 18.49vw;
+                position: absolute;
+                top: 2.74vw;
+                left: 0;
+                right: 0;
+                z-index: 4;
+                margin: auto;
+                img {
+                    width: 100%;
+                    vertical-align: bottom;
+                }
+                @include anim(titleSubShow, 10s);
+                @keyframes titleSubShow {
+                    0% {
+                        opacity: 0;
+                        transform: translate(0, -20%);
+                    }
+                    15% {
+                        opacity: 0;
+                        transform: translate(0, -20%);
+                    }
+                    20% {
+                        opacity: 1;
+                        transform: translate(0, 0);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translate(0, 0);
+                    }
+                }
+            }
+            &_titleSerif {
+                width: 4.04vw;
+                position: absolute;
+                top: 8.34vw;
+                left: -28.25vw;
+                right: 0;
+                margin: auto;
+                z-index: 4;
+                img {
+                    width: 100%;
+                    vertical-align: bottom;
+                }
+                @include anim(titleSerifShow, 10s);
+                @keyframes titleSerifShow {
+                    0% {
+                        opacity: 0;
+                        transform: translate(0, -20%);
+                    }
+                    15% {
+                        opacity: 0;
+                        transform: translate(0, -20%);
+                    }
+                    20% {
+                        opacity: 1;
+                        transform: translate(0, 0);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translate(0, 0);
+                    }
+                }
+            }
+        }
+        &_bottomArea {
+            position: relative;
+            z-index: 3;
+            height: 40%;
+            text-align: center;
+            background-color: #fff;
+            p {
+                font-size: 0.92vw;
+                padding: 1.31vw 0 0;
+                line-height: 1.9;
+                color: #001842;
+                @include anim(bottomAreaParaph, 10s);
+                @keyframes bottomAreaParaph {
+                    0% {
+                        opacity: 0;
+                    }
+                    20% {
+                        opacity: 0;
+                    }
+                    21% {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &_circleArea {
+        width: 66.41vw;
+        height: 66.41vw;
+        position: relative;
+        @include hVCenter();
+        z-index: 2;
+        border-radius: 50%;
+        @include anim(circleAreaShow, 10s);
+        @keyframes circleAreaShow {
+            0% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        &_circleItem {
+            position: absolute;
+            border-radius: 50%;
+        }
+        &_circleOne {
+            width: 20.84vw;
+            height: 20.84vw;
+            top: 3.91vw;
+            left: 15.37vw;
+            background-color: #1b3159;
+        }
+        &_circleTwo {
+            width: 2.22vw;
+            height: 2.22vw;
+            top: 18.23vw;
+            left: 6.52vw;
+            background-color: #1b3159;
+        }
+    }
+    &_imageArea {
+        width: 66.41vw;
+        height: 66.41vw;
+        position: relative;
+        @include hVCenterScale(1);
+        z-index: 3;
+        border-radius: 50%;
+        @include anim(circleAreaShow, 10s);
+        @keyframes circleAreaShow {
+            0% {
+                opacity: 0;
+                @include hVCenterScale(0);
+            }
+            50% {
+                opacity: 0;
+                @include hVCenterScale(0);
+            }
+            70% {
+                opacity: 1;
+                @include hVCenterScale(1);
+            }
+            100% {
+                opacity: 1;
+                @include hVCenterScale(1);
+            }
+        }
+        img {
+            width: 100%;
+            vertical-align: bottom;
+        }
+        &_foodOne {
+            position: absolute;
+            width: 13.03vw;
+            height: 13.03vw;
+            top: 10vw;
+            left: 10vw;
+        }
+        &_foodTwo {
+            position: absolute;
+            width: 19.54vw;
+            height: 19.54vw;
+            top: 25vw;
+            left: -5vw;
+        }
+        &_foodThree {
+            position: absolute;
+            width: 14.98vw;
+            height: 14.98vw;
+            left: 13vw;
+            bottom: 7vw;
+        }
+        &_foodFour {
+            position: absolute;
+            width: 19.54vw;
+            height: 19.54vw;
+            top: 9vw;
+            right: -1vw;
+        }
+    }
+}

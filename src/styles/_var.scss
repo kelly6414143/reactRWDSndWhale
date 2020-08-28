@@ -1,0 +1,35 @@
+@mixin hVCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin hVCenterScale($scale) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale($scale);
+}
+
+@mixin hVCenterFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin circle($length) {
+    width: $length;
+    height: $length;
+}
+
+@mixin imgCover($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin anim($name, $duration) {
+    animation: $name $duration;
+}
