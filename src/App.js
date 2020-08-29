@@ -35,37 +35,43 @@ class App extends React.Component {
   onScroll = () => {
     let direction = this.state.scrollY < window.scrollY ? 'down' : 'up';
     let scrollY = window.scrollY
-    if (scrollY < document.getElementById("page3").offsetTop) {
-      let bodyHeight = document.body.clientHeight
-      if (direction === "down") {
-        if (scrollY % bodyHeight > 50) {
-          window.scrollTo({
-            top: Math.ceil(scrollY / bodyHeight) * bodyHeight,
-            behavior: "instant"
-          });
-        }
-      } else if (direction === "up") {
-        if (scrollY % bodyHeight < bodyHeight - 50) {
-          window.scrollTo({
-            top: Math.floor(scrollY / bodyHeight) * bodyHeight,
-            behavior: "instant"
-          });
+    if (this.state.windowWidth >= 769) {
+      if (scrollY < document.getElementById("page4").offsetTop) {
+        let bodyHeight = document.body.clientHeight
+        if (direction === "down") {
+          if (scrollY % bodyHeight > 2) {
+            document.getElementById("main").style.transform = `translate(0 ,-${Math.ceil(scrollY / bodyHeight) * bodyHeight}px)`
+            document.getElementById("main").style.transition = "all linear 1s"
+            // window.scrollTo({
+            //   top: Math.ceil(scrollY / bodyHeight) * bodyHeight
+            // });
+          }
+        } else if (direction === "up") {
+          if (scrollY % bodyHeight < bodyHeight - 2) {
+            document.getElementById("main").style.transform = `translate(0 ,-${Math.ceil(scrollY / bodyHeight) * bodyHeight}px)`
+            // window.scrollTo({
+            //   top: Math.floor(scrollY / bodyHeight) * bodyHeight
+            // });
+          }
         }
       }
     }
-
-
 
 
     this.setState({ scrollY });
   }
 
   render() {
+    const { windowWidth, scrollY, topBarHeight } = this.state;
+
+    const styles = {
+      changePosition: windowWidth < 769,
+    };
     return (
       <div className="App">
         <div id="wrap">
           <div id="main">
-            <Mainpage/>
+            <Mainpage styles={styles} />
             <div id="page3" className="page">3</div>
             <div id="page4" className="page">4</div>
           </div>
