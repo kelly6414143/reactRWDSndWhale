@@ -145,7 +145,7 @@ class Mainpage extends React.Component {
         };
 
         return (
-            <div className="Mainpage">
+            <div className="Mainpage page">
                 <div style={mainPageStyle.bigCircle} className="Mainpage_bigCircle"></div>
                 <div style={mainPageStyle.smallCircle} className="Mainpage_smallCircle">
                     <div className="Mainpage_smallCircle_topArea">
