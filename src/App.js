@@ -1,4 +1,5 @@
 import React from 'react';
+import LoadingPage from './components/LoadingPage'
 import Mainpage from './components/MainPage'
 
 class App extends React.Component {
@@ -11,7 +12,8 @@ class App extends React.Component {
       windowHeight: 0,
       scrollY: 0,
       topBarHeight: 0,
-      time: 0
+      time: 0,
+      loading: true
     };
   }
 
@@ -29,7 +31,9 @@ class App extends React.Component {
   updateDimensions() {
     let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
     let windowHeight = typeof window !== "undefined" ? window.innerHeight : 0;
-
+    setTimeout(() => {
+      this.setState({ loading: false });
+    }, 2000);
     this.setState({ windowWidth, windowHeight });
   }
 
@@ -63,7 +67,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { windowWidth, scrollY, topBarHeight } = this.state;
+    const { windowWidth, scrollY, loading } = this.state;
 
     const styles = {
       changePosition: windowWidth < 769,
@@ -75,23 +79,26 @@ class App extends React.Component {
       }
     };
     return (
-      <div className="App">
-        <div style={styles.menu} id="menu">
-          <div className="line_group">
-            <span></span>
-            <span></span>
-            <span></span>
+      <>
+        {loading ? <LoadingPage />
+         : <div className="App">
+          <div style={styles.menu} id="menu">
+            <div className="line_group">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <p>MENU</p>
           </div>
-          <p>MENU</p>
-        </div>
-        <div id="main">
-          <div id="wrap">
-            <Mainpage styles={styles} />
-            <div id="page3" className="page">3</div>
-            <div id="page4" className="page">4</div>
+          <div id="main">
+            <div id="wrap">
+              <Mainpage styles={styles} />
+              <div id="page3" className="page">3</div>
+              <div id="page4" className="page">4</div>
+            </div>
           </div>
-        </div>
-      </div>
+        </div>}
+      </>
     );
   }
 }
