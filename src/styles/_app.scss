@@ -6,14 +6,15 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
+    transition: all 0.2s linear;
 }
 #wrap {
     width: 100%;
     height: auto;
     position: relative;
     // touch-action: auto;
-	// max-height: 100vh;
-	// overflow-y: scroll;
+    // max-height: 100vh;
+    // overflow-y: scroll;
     // scroll-snap-type: y mandatory;
     // &::-webkit-scrollbar {
     //     /*隱藏滾輪*/
@@ -28,15 +29,11 @@ body {
     font-size: 50px;
 }
 
-#page3 {
-    background: #bf4938;
-}
 #page4 {
     background: #2932e1;
 }
 
-
-#menu{
+#menu {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -44,29 +41,49 @@ body {
     align-items: center;
     z-index: 0;
     backface-visibility: hidden;
-    background-color: #001842;
     border-radius: 50%;
-    z-index: 1;
-    transition: all linear .2s;
+    z-index: 6;
+    transition: all linear 0.2s;
     cursor: pointer;
-    &:hover{
+    &:hover {
         transform: scale(1.1);
     }
-    p{
+    p {
         color: white;
+        font-size: 10px;
     }
-    .line_group{
+    .line_group {
         margin-top: 15px;
         width: 16px;
         display: flex;
         justify-content: space-between;
         font-size: 10px;
-        span{
+        span {
             margin-bottom: 5px;
             width: 2px;
             height: 10px;
             display: inline-block;
             background-color: #fff;
         }
+    }
+}
+
+#menuList {
+    width: 28.65vw;
+    height: 28.65vw;
+    position: fixed;
+    top: 0.66vw;
+    right: 0.66vw;
+    z-index: 5;
+    background-color: #001842;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s linear;
+    p {
+        color: #fff;
     }
 }

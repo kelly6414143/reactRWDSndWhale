@@ -30,6 +30,6 @@
     background-position: center;
 }
 
-@mixin anim($name, $duration, $delay:0s, $iterationCount: 1, $fillMode: none) {
+@mixin anim($name, $duration:0s, $delay:0s, $iterationCount: 1, $fillMode: none) {
     animation: $name $duration $delay $iterationCount $fillMode;
 }

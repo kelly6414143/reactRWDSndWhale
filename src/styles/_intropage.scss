@@ -1,0 +1,111 @@
+.Intropage {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    @include hVCenterFlex();
+    background-image: url(../images/whale_bg@1x.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    &_menu {
+        width: 42.19vw;
+        background-color: #001842;
+        border-bottom-left-radius: 17px;
+        border-bottom-right-radius: 17px;
+        position: absolute;
+        z-index: 1000;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: auto;
+    }
+    &_menuInner {
+        padding: 1.18vw 0 1.31vw;
+        display: flex;
+        justify-content: center;
+        &_title {
+            font-size: 1.18vw;
+            color: #fff;
+            margin-right: 5.08vw;
+            line-height: 1;
+        }
+        &_listGroup {
+            @include hVCenterFlex();
+        }
+        &_list {
+            color: #fff;
+            margin-right: 2.35vw;
+            font-size: 0.92vw;
+            letter-spacing: 0.08em;
+            cursor: pointer;
+        }
+    }
+    &_content {
+        &_next {
+            width: 5.47vw;
+            height: 5.47vw;
+            position: absolute;
+            top: 0;
+            right: 2.61vw;
+            bottom: 0;
+            z-index: 3;
+            margin: auto;
+            border-radius: 50%;
+            background-image: url(../images/slick_next.svg);
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: 98%;
+            cursor: pointer;
+        }
+        &_prev {
+            width: 5.47vw;
+            height: 5.47vw;
+            position: absolute;
+            top: 0;
+            left: 2.61vw;
+            bottom: 0;
+            z-index: 3;
+            margin: auto;
+            border-radius: 50%;
+            background-image: url(../images/slick_prev.svg);
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: 98%;
+            cursor: pointer;
+        }
+        &_main {
+            // display: flex;
+            &_whaleImage {
+                position: relative;
+                left: 0;
+                right: 0;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: auto;
+            }
+            &_whale1 {
+                width: 36.07vw;
+                height: 14.2vw;
+                background-image: url(../images/whale_01@2x.png);
+            }
+            &_whale2 {
+                width: 54.3vw;
+                height: 18.75vw;
+                background-image: url(../images/whale_02@2x.png);
+            }
+            &_whale3 {
+                width: 69.93vw;
+                height: 31.78vw;
+                background-image: url(../images/whale_03@2x.png);
+            }
+            &_wrap {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all 0.5s cubic-bezier(1, 0, 0, 1)
+            }
+        }
+    }
+}
