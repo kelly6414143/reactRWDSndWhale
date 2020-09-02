@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8a353ab123adf11d04b8d9e6d1c1fb1f",
+    "revision": "d68c819e83c982cbd8f3dec671eb264d",
     "url": "/reactRWDSndWhale/index.html"
   },
   {
-    "revision": "1428064a5650a0c85c8d",
-    "url": "/reactRWDSndWhale/static/css/main.e0b98979.chunk.css"
+    "revision": "892a6bcd6dc6b8a89663",
+    "url": "/reactRWDSndWhale/static/css/main.373a21e3.chunk.css"
   },
   {
     "revision": "b0cd7b7e4ef0cb3cd6f1",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reactRWDSndWhale/static/js/2.37290d7c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1428064a5650a0c85c8d",
-    "url": "/reactRWDSndWhale/static/js/main.9f2d2ef5.chunk.js"
+    "revision": "892a6bcd6dc6b8a89663",
+    "url": "/reactRWDSndWhale/static/js/main.903d9baf.chunk.js"
   },
   {
     "revision": "66691158fce9b85da044",
