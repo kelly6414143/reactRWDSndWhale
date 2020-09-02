@@ -141,6 +141,9 @@ class Mainpage extends React.Component {
                 top: styles.changePosition ? 'auto' : "40.11vw",
                 bottom: styles.changePosition ? '4.42vh' : "",
                 right: styles.changePosition ? '3.31vh' : "5.21vw",
+            },
+            scrollItem: {
+                opacity: styles.changePosition ? 0 : 1,
             }
         };
 
@@ -176,6 +179,9 @@ class Mainpage extends React.Component {
                         <br />鯨のことを知れば、
                         <br />もっと美味しくなります！
                         </p>
+                        <div style={mainPageStyle.scrollItem} className="Mainpage_smallCircle_bottomArea_scroll">
+                            <span></span>
+                        </div>
                     </div>
                 </div>
                 <div style={mainPageStyle.circleArea} className="Mainpage_circleArea">

@@ -297,6 +297,50 @@
                     }
                 }
             }
+            &_scroll {
+                width: 6.52vw;
+                height: 7.82vw;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 10;
+                margin: auto;
+                cursor: pointer;
+                span {
+                    width: 6.52vw;
+                    height: 6.25vw;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-image: url(../images/mv_scrollIcon@2x.png);
+                    background-size: 3.78vw 6.25vw;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    transform-origin: bottom;
+                    transform: perspective(250px);
+                    @include anim(scrollItemUpDown, 2s, infinite, both);
+                    @keyframes scrollItemUpDown {
+                        0% {
+                            transform: rotateX(0) rotateZ(0.001deg);
+                            -webkit-transform: rotateX(0) rotateZ(0.001deg);
+                        }
+                        10% {
+                            transform: rotateX(-20deg) rotateZ(0.001deg);
+                            -webkit-transform: rotateX(-20deg) rotateZ(0.001deg);
+                        }
+                        40% {
+                            transform: rotateX(0) rotateZ(0.001deg);
+                            -webkit-transform: rotateX(0) rotateZ(0.001deg);
+                        }
+                        100% {
+                            transform: rotateX(0) rotateZ(0.001deg);
+                            -webkit-transform: rotateX(0) rotateZ(0.001deg);
+                        }
+                    }
+                }
+            }
         }
     }
     &_circleArea {

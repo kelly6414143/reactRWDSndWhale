@@ -67,10 +67,16 @@ class App extends React.Component {
 
     const styles = {
       changePosition: windowWidth < 769,
+      menu: {
+        width: windowWidth < 769 ? "90px" : "9.77vw",
+        height: windowWidth < 769 ? "90px" : "9.77vw",
+        top: windowWidth < 769 ? "-15px" : "-1.95vw",
+        right: windowWidth < 769 ? "-15px" : "-1.95vw",
+      }
     };
     return (
       <div className="App">
-        <div id="menu">
+        <div style={styles.menu} id="menu">
           <div className="line_group">
             <span></span>
             <span></span>
