@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/reactRWDSndWhale/static/css/main.373a21e3.chunk.css",
-    "main.js": "/reactRWDSndWhale/static/js/main.903d9baf.chunk.js",
-    "main.js.map": "/reactRWDSndWhale/static/js/main.903d9baf.chunk.js.map",
+    "main.css": "/reactRWDSndWhale/static/css/main.26f15d45.chunk.css",
+    "main.js": "/reactRWDSndWhale/static/js/main.6bfdea51.chunk.js",
+    "main.js.map": "/reactRWDSndWhale/static/js/main.6bfdea51.chunk.js.map",
     "runtime-main.js": "/reactRWDSndWhale/static/js/runtime-main.dd95f892.js",
     "runtime-main.js.map": "/reactRWDSndWhale/static/js/runtime-main.dd95f892.js.map",
     "static/js/2.37290d7c.chunk.js": "/reactRWDSndWhale/static/js/2.37290d7c.chunk.js",
     "static/js/2.37290d7c.chunk.js.map": "/reactRWDSndWhale/static/js/2.37290d7c.chunk.js.map",
     "index.html": "/reactRWDSndWhale/index.html",
-    "precache-manifest.019024f751ac057becfd876c0d99e1ca.js": "/reactRWDSndWhale/precache-manifest.019024f751ac057becfd876c0d99e1ca.js",
+    "precache-manifest.a336432b209595479d10ed943d085b7e.js": "/reactRWDSndWhale/precache-manifest.a336432b209595479d10ed943d085b7e.js",
     "service-worker.js": "/reactRWDSndWhale/service-worker.js",
-    "static/css/main.373a21e3.chunk.css.map": "/reactRWDSndWhale/static/css/main.373a21e3.chunk.css.map",
+    "static/css/main.26f15d45.chunk.css.map": "/reactRWDSndWhale/static/css/main.26f15d45.chunk.css.map",
     "static/js/2.37290d7c.chunk.js.LICENSE.txt": "/reactRWDSndWhale/static/js/2.37290d7c.chunk.js.LICENSE.txt",
     "static/media/mv_img01@2x.png": "/reactRWDSndWhale/static/media/mv_img01@2x.ad75e952.png",
     "static/media/mv_img02@2x.png": "/reactRWDSndWhale/static/media/mv_img02@2x.f61b0ff2.png",
     "static/media/mv_img03@2x.png": "/reactRWDSndWhale/static/media/mv_img03@2x.738b9e06.png",
     "static/media/mv_img04@2x.png": "/reactRWDSndWhale/static/media/mv_img04@2x.0ac1eb4a.png",
-    "static/media/index.scss": "/reactRWDSndWhale/static/media/mv_whale@2x.8e66154d.png",
+    "static/media/index.scss": "/reactRWDSndWhale/static/media/whale_bg@1x.87fc0838.png",
     "static/media/mv_title01@2x.png": "/reactRWDSndWhale/static/media/mv_title01@2x.3061453f.png",
     "static/media/mv_title02@2x.png": "/reactRWDSndWhale/static/media/mv_title02@2x.905f8304.png",
     "static/media/mv_titleSub@2x.png": "/reactRWDSndWhale/static/media/mv_titleSub@2x.b720eb64.png"
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.dd95f892.js",
     "static/js/2.37290d7c.chunk.js",
-    "static/css/main.373a21e3.chunk.css",
-    "static/js/main.903d9baf.chunk.js"
+    "static/css/main.26f15d45.chunk.css",
+    "static/js/main.6bfdea51.chunk.js"
   ]
 }
